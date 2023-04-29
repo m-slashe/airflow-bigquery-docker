@@ -8,7 +8,7 @@ default_args = {
     'start_date': datetime(2023, 4, 27)
 }
 
-with DAG('bigquery_emulator_test', default_args=default_args, schedule_interval=None) as dag:
+with DAG('bigquery_emulator_test', default_args=default_args, schedule_interval=None, is_paused_upon_creation=False) as dag:
     start_task = BashOperator(
         task_id='start_task',
         bash_command='echo "Start task!"'

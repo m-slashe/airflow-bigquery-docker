@@ -1,4 +1,3 @@
-from airflow.providers.google.common.hooks.base_google import GoogleBaseHook
 from google.api_core.client_options import ClientOptions
 from google.auth.credentials import AnonymousCredentials
 from google.cloud import bigquery
